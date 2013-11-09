@@ -1,0 +1,64 @@
+    img {
+      display: block;
+    }
+    ol.disc {
+    }
+
+    p {
+      line-height: 1.8em;
+    }
+    #audioPlayer {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      bottom:0;
+      background: #ddd;
+      z-index: 2;
+      color: #000;
+      padding: 1em;
+      border: 5px solid black;
+    }
+    #audioPlayer .toggle {
+      position: absolute;
+      right: 10%;
+    }
+    .large-7{
+      max-width: 640px;
+    }
+    .small-45columns {
+      max-width: 320px;
+    }
+    .toggle {
+      position: absolute;
+      right: 10px;
+    }
+    #wrapper {
+      max-width: 920px;
+
+    }
+    audio {
+      display: inline;
+    }
+
+    body {
+      width: auto;
+    }
+
+    #body-wrapper {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    #body-wrapper h1 {
+      padding-left: 0.3em;
+    }
+    #lede h4 {
+      margin-bottom: 0;
+      font-size:  1.3em;
+    }
+    #lede-summary {
+      display: inline;
+      font-size: 0.9em;
+    }
+    #stories {
+      padding-top: 1em;
+    }

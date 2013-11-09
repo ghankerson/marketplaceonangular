@@ -1,0 +1,18 @@
+<div ng-controller="homeCtl">
+<div class="columns" id="lede"> 
+  <h4>{{lede.title}}</h4>
+    <img ng-src="{{lede.primary_image.small.image}}"/>
+  <div id="lede-summary"ng-bind-html-unsafe="lede.summary"> 
+  </div>
+  <a ng-href="#/node/{{lede.id}}">more ...</a>
+
+</div>
+<div class="columns" infinite-scroll="next()" id="stories">
+  <ol>
+    <li ng-repeat="story in arr" class="alert-box secondary">
+      <h6 class="subheader"><a ng-href="#/node/{{story.id}}" ng-bind-html-unsafe="story.title"></a></h6>
+    </li>
+  </ol>
+
+</div>
+</div>
