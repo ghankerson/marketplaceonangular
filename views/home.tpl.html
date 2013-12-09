@@ -7,9 +7,9 @@
   <a ng-href="#/node/{{lede.id}}">more ...</a>
 
 </div>
-<div class="columns" infinite-scroll="next()" id="stories">
+<div class="columns" id="stories">
   <ol>
-    <li ng-repeat="story in arr" class="alert-box secondary">
+    <li ng-repeat="story in storylist" class="alert-box secondary">
       <h6 class="subheader"><a ng-href="#/node/{{story.id}}" ng-bind-html-unsafe="story.title"></a></h6>
     </li>
   </ol>

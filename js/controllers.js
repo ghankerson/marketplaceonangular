@@ -8,17 +8,13 @@ app.controller('homeCtl', ['$scope', 'mktplcData', 'audioQueue',
     }
     $scope.arr = [];
     mktplcData.setParams($scope.start, $scope.rows);
-    var data = mktplcData.getData();
     
-    data.then(function(promise) {
-      $scope.lede = promise.data[0];
-      $scope.title = promise.data.feedmetadata.title;
-      delete promise.data[0];
-      delete promise.data.feedmetadata;
-      for( var i in promise.data) {
-          $scope.arr.push(promise.data[i]);
-        } 
+    var storylist; 
+    mktplcData.getStories( function(stories) {
+      $scope.storylist = stories;
     });
+    console.log($scope.storylist);
+    
     $scope.next = function () {
       $scope.start += 10;
       mktplcData.setParams($scope.start, $scope.rows);
