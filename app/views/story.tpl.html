@@ -1,3 +1,4 @@
 <h3 ng-bind-html="story.title"></h3>
-<img ng-src="{{story.primary_image.small.image}}"/>
+<a href="javascript: void(0)" ng-click="queue(story)">Listen/Queue</a>
+<img ng-src="{{story.primary_image.large.image}}"/>
 <p ng-bind-html="story.body"> </p>
