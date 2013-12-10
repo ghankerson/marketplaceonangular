@@ -43,8 +43,8 @@
         </script>
         -->
         <div ng-controller="AudioCtl">
-            <audio ng-src="{{audio.url}}" controls></audio>
-            <span ng-bind-html="audio.title"></span>
+            <audio ng-src="{{audio.url}}" controls autoplay="true" ng-if="audio.url"></audio>
+            <span ng-bind-html="audio.title" ng-if="audio.title"></span>
         </div>
 
         <script src="bower_components/angular/angular.js"></script>

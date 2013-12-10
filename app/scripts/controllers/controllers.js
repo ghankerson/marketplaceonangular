@@ -19,6 +19,9 @@ controller('StoryCtl', ['$rootScope', '$scope', 'mktplcData', '$routeParams', 'a
 			for (var i in resp.data) {
 				if ((resp.data[i].id === $routeParams.id)) {
 					$scope.story = resp.data[i];
+          $scope.prev = resp.data[i - 1];
+          $scope.next = resp.data[parseInt(i) + 1];
+          
 				}
 			}
 		});
@@ -40,5 +43,6 @@ controller('AudioCtl', ['$scope', 'audioQueue', '$sce', function($scope, audioQu
           title: audioQueue.playlist[0].title,
           url: $sce.trustAsResourceUrl(audioQueue.playlist[0].url)
         };
+        
     });
 }]);
