@@ -1,5 +1,5 @@
-<ul>
-    <li ng-repeat="row in data.rows" ng-class="{first:$first}">
+<ul class='list-unstyled'>
+    <li ng-repeat="row in data.rows" ng-class="{first:$first}" class="row">
         <img ng-if="$first" ng-src="{{row.primary_image.small.image}}"/>
         <h4><a ng-href="#/node/{{row.id}}" ng-bind-html="row.title"></a></h4>
         <div ng-bind-html="row.summary"></div>

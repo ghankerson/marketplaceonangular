@@ -12,6 +12,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
     </head>
@@ -26,9 +27,14 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h1><a href="/#">Marketplace</a></h1>
+        <h1 class="container"><a href="/#">Marketplace</a></h1>
         <div class="container">
+
             <div ng-view></div>
+            <div ng-controller="AudioCtl" class="audio">
+                <audio ng-src="{{audio.url}}" controls autoplay="true" ng-if="audio.url"></audio>
+                <span ng-if="audio.title">Now Playing: </span><span ng-bind-html="audio.title" ng-if="audio.title"></span>
+            </div>
         </div>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID
@@ -42,10 +48,7 @@
            ga('send', 'pageview');
         </script>
         -->
-        <div ng-controller="AudioCtl">
-            <audio ng-src="{{audio.url}}" controls autoplay="true" ng-if="audio.url"></audio>
-            <span ng-bind-html="audio.title" ng-if="audio.title"></span>
-        </div>
+
 
         <script src="bower_components/angular/angular.js"></script>
 

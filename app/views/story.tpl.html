@@ -1,4 +1,6 @@
 <h3 ng-bind-html="story.title"></h3>
+<span class="strong" ng-if="story.authors.author">by {{story.authors.author}}</span>
+<div>Marketplace for  {{story.pubDate|  date: 'EEEE, MMMM d, yyyy'}}</div>
 <a href="javascript: void(0)" ng-click="queue(story)" ng-if="story.audio.url">Listen/Queue</a>
 <img ng-src="{{story.primary_image.small.image}}"/>
 <p ng-bind-html="story.body"> </p>
@@ -7,6 +9,6 @@
         <a ng-href="/#/node/{{prev.id}}">Previous: {{prev.title}} </a>
     </div>
     <div id="next" ng-if="next.id">
-        <a href="/#/node/{{next.id}}">Next {{next.title}} </a>
+        <a href="/#/node/{{next.id}}">Next: {{next.title}} </a>
     </div>
 </div>

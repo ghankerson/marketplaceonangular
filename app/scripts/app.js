@@ -1,7 +1,6 @@
 'use strict';
 
 angular.module('mktplcAngularApp', [
-	'ngCookies',
 	'ngSanitize',
 	'ngRoute',
 	'mktplcAngularApp.controllers'
